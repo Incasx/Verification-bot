@@ -1,12 +1,12 @@
 const Discord = require('discord.js')
 const colors = require('./colors.json')
-const token = 'ODI2MzM2NDk5NDk0NjgyNjY0.YGK_1g.YZQ2HcxjFDi4IGFrp9QTWRLhv44'
+const token = 'TOken Name'
 const PREFIX = '+'
 const client = new Discord.Client()
 
 client.on('ready', () => {
     console.log(client.user.tag + " is ready to verify!")
-    client.user.setActivity("Vonkey | Verification", {
+    client.user.setActivity(" Bunny | Verification", {
         type: "PLAYING"
     });
 })
@@ -48,7 +48,7 @@ client.on('message', async message => {
                                 .setColor(colors.green)
                                 .setDescription(`<a:tick:811476337537449985> **You have been verified to: \`${message.guild.name}\`!**`)
                                 .setFooter(message.client.user.username, message.client.user.avatarURL())
-                            const role = message.guild.roles.cache.find(role => role.id === '826346540577587240');
+                            const role = message.guild.roles.cache.find(role => role.id === 'Role name');
                             message.member.roles.add(role);
                             await message.channel.send(verificationEmbed).then(m => m.delete({
                                 timeout: 3000
