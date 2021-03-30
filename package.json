@@ -1,12 +1,12 @@
 {
-  "name": "verify-bot",
+  "name": "bunny-verify-bot",
   "version": "1.0.0",
-  "description": "Verify Bunny Gang",
+  "description": "Verification Bot by Bunny",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Bunny",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1"
