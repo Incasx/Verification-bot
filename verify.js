@@ -69,7 +69,7 @@ client.on('message', async message => {
                             }))
                             .setTitle("YOU HAVE FAILED THE VERIFICATION")
                             .setColor(colors.red)
-                            .setDescription(`You have failed the verification in \`${message.guild.name}\`! If you want to try again, please click [here](https://discord.gg/TfWWGrx) to rejoin!`)
+                            .setDescription(`You have failed the verification in \`${message.guild.name}\`! If you want to try again, please click [here](Discord Link) to rejoin!`)
                             .setFooter(message.client.user.username, message.client.user.avatarURL())
                         await message.author.send(retryEmbed)
                     });
