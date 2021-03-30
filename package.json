@@ -2,9 +2,9 @@
   "name": "bunny-verify-bot",
   "version": "1.0.0",
   "description": "Verification Bot by Bunny",
-  "main": "index.js",
+  "main": "verify.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node verify.js"
   },
   "author": "Bunny",
   "license": "ISC",
