@@ -27,8 +27,8 @@ client.on('message', async message => {
                 }))
                 .setTitle(`Welcome to ${message.guild.name}!`)
                 .setColor(colors.green)
-                .setDescription(`Hello ${message.author}! This server is protected by ${message.client.user.username}. Inorder to verify yourself to the server, please type in the CAPTCHA sent to you below. You have 5 minutes to do so, if not you will be kicked. `)
-                .addField("Please Type:", `\`bunny\``)
+                .setDescription(`Hello ${message.author}! This server is protected by ${message.client.user.username}. in order to verify yourself to the server, please type in the CAPTCHA sent to you below. You have 5 minutes to do so, if not you will be kicked. `)
+                .addField("Code:", `\`bunny\``)
             message.channel.send(firstVerifyEmbed).then(() => {
                 const filter = m => message.author.id === m.author.id;
 
@@ -48,7 +48,7 @@ client.on('message', async message => {
                                 .setColor(colors.green)
                                 .setDescription(`<a:tick:811476337537449985> **You have been verified to: \`${message.guild.name}\`!**`)
                                 .setFooter(message.client.user.username, message.client.user.avatarURL())
-                            const role = message.guild.roles.cache.find(role => role.id === 'Role name');
+                            const role = message.guild.roles.cache.find(role => role.id === 'Role ID');
                             message.member.roles.add(role);
                             await message.channel.send(verificationEmbed).then(m => m.delete({
                                 timeout: 3000
@@ -77,7 +77,7 @@ client.on('message', async message => {
         }
     }
 
-    if (message.channel.id === "746897244019490868") {
+    if (message.channel.id === "") {
         if (message.author.id === message.client.user.id) return
         if (message.content.startsWith("+verify")) return
         if (message.content.toLowerCase() === "bunny") return
